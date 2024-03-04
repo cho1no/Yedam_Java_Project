@@ -19,6 +19,7 @@ public class InOutExample {
 		String strVal = sc.nextLine();
 		System.out.println("실제 출력 : " + strVal);
 		
+
 		sc.close();
 	}
 }
