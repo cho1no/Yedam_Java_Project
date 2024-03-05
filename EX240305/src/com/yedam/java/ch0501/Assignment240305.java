@@ -18,13 +18,13 @@ public class Assignment240305 {
 		System.out.println("y 입력>");
 		int y = Integer.parseInt(scanner.nextLine());
 		if (x>0 && y>0) {
-			
+			System.out.println("제1사분면");
 		} else if (x<0 && y>0) {
-			
+			System.out.println("제2사분면");
 		} else if (x<0 && y<0) {
-			
+			System.out.println("제3사분면");
 		} else {
-			
+			System.out.println("제4사분면");
 		}
 		
 
