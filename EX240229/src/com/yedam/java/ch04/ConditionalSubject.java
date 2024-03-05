@@ -1,5 +1,7 @@
 package com.yedam.java.ch04;
 
+import java.util.Scanner;
+
 public class ConditionalSubject {
 	public static void main(String[] args) {
 		// 문제1) 두 개의 정수가 주어졌을 때 두 정수의 합이 자연수이면 'Natural Number'을 출력하도록 하세요.
@@ -42,8 +44,38 @@ public class ConditionalSubject {
 		   예를 들어, 2단일 경우 2 X 6 = 12 
 		   단, 출력문에 변수를 사용하지 않는다.
 		 */
-		int num;
-		num = 7;
-		System.out.println(num * 6);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("입력한 숫자의 구구단 6번째 값이 출력됩니다.");
+		System.out.print("2~9까지의 숫자 입력 >>");
+		int num = sc.nextInt();
+		switch (num) {
+		case 2:
+			System.out.println(2 * 6 + "입니다.");
+			break;
+		case 3:
+			System.out.println(3 * 6 + "입니다.");
+			break;
+		case 4:
+			System.out.println(4 * 6 + "입니다.");
+			break;
+		case 5:
+			System.out.println(5 * 6 + "입니다.");
+			break;
+		case 6:
+			System.out.println(6 * 6 + "입니다.");
+			break;
+		case 7:
+			System.out.println(7 * 6 + "입니다.");
+			break;
+		case 8:
+			System.out.println(8 * 6 + "입니다.");
+			break;
+		case 9:
+			System.out.println(9 * 6 + "입니다.");
+			break;
+		default:
+			System.out.println("2~9까지의 숫자를 적어주세요.");
+		}
+		sc.close();
 	}
 }
