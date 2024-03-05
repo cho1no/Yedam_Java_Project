@@ -23,6 +23,7 @@
 hs_err_pid*
 replay_pid*
 
+# added new ignore 240305
 .classpath
 .project
 .settings
