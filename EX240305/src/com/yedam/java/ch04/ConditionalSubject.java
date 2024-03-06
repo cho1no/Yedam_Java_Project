@@ -113,5 +113,6 @@ public class ConditionalSubject {
 			System.out.println();
 		}
 		System.out.println("프로그램 종료");
+		sc.close();
 	}
 }

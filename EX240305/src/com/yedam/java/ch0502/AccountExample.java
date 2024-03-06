@@ -1,6 +1,5 @@
 package com.yedam.java.ch0502;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AccountExample {
@@ -38,5 +37,6 @@ public class AccountExample {
 			System.out.println();
 		}
 		System.out.println("프로그램 종료");
+		sc.close();
 	}
 }
