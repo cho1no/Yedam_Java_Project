@@ -13,9 +13,9 @@ public class Assignment240305 {
 		// 제3사분면 : x<0, y<0
 		// 제4사분면 : x>0, y<0
 		// 문제출처, 백준(https://www.acmicpc.net/) 14681번 문제
-		System.out.println("x 입력>");
+		System.out.print("x 입력>");
 		int x = Integer.parseInt(scanner.nextLine());
-		System.out.println("y 입력>");
+		System.out.print("y 입력>");
 		int y = Integer.parseInt(scanner.nextLine());
 		if (x>0 && y>0) {
 			System.out.println("제1사분면");
@@ -34,7 +34,7 @@ public class Assignment240305 {
 		// 1900년은 100의 배수이고 400의 배수는 아니기 때문에 윤년이 아닙니다.
 		// HiNT : 이중 IF문 사용
 		// 문제출처, 백준(https://www.acmicpc.net/) 2753번 문제
-		System.out.println("연도 입력>");
+		System.out.print("연도 입력>");
 		int year = Integer.parseInt(scanner.nextLine());
 		if ((year%4 == 0 && year%100 != 0) || year%400 == 0) {
 			System.out.println("윤년입니다.");
@@ -47,7 +47,7 @@ public class Assignment240305 {
 		// 구현하세요.
 		// 예를 들어, 가위가 주어졌을 때 "이기기 위해선 바위를 내야합니다." 라고 출력하도록 하세요.
 		// 한 단어를 입력받을 경우 Scanner객체의 next() 함수를 사용하면 됩니다.
-		System.out.println("가위, 바위, 보 중 입력>");
+		System.out.print("가위, 바위, 보 중 입력>");
 		String value = scanner.nextLine();
 		switch (value) {
 		case "가위":	System.out.println("이기기 위해선 바위를 내야합니다."); break;
@@ -63,9 +63,9 @@ public class Assignment240305 {
 		// 2 X 1 = 2
 		// 2 X 2 = 4
 		// 2 X 3 = 6
-		System.out.println("m 입력>");
+		System.out.print("m 입력>");
 		int m = Integer.parseInt(scanner.nextLine());
-		System.out.println("n 입력>");
+		System.out.print("n 입력>");
 		int n = Integer.parseInt(scanner.nextLine());
 		for (int i = 1; i < n+1; i++) {
 			System.out.println(m + " X " + i + " = " + m*i);
