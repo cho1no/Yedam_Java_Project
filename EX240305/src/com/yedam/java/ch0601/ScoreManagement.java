@@ -4,6 +4,7 @@ public class ScoreManagement {
 	//필드
 	private int[] scoreList;
 	private int currentIndex = 0;
+	
 	//생성자
 	ScoreManagement(int studentNum){
 		this.scoreList = new int[studentNum];
