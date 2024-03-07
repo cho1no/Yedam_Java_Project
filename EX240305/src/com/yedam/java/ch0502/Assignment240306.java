@@ -49,7 +49,7 @@ public class Assignment240306 {
 				}
 				avg /= scores.length;
 				System.out.println("최고 점수: " + max);
-				System.out.println("평균 점수: " + avg);
+				System.out.printf("평균 점수: %.3f\n", avg);
 			} else if (menu == 5) { // 종료
 				isRun = false;
 			} else {

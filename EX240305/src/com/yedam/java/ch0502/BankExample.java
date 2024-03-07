@@ -107,21 +107,22 @@ public class BankExample {
 				System.out.print("본인 계좌 >> ");
 				int myAccount = sc.nextInt();
 				if (myAccount > currentMax+1) {
-					System.out.println("없는 계좌입니다.");
+					System.out.println("없는 계좌번호입니다. 계좌번호를 확인해주세요.");
 					break;
 				}
+				System.out.printf("%d 계좌의 잔액은 %d원 입니다.", myAccount, accounts[myAccount-1]);
 				System.out.print("이체할 계좌 >> ");
 				int toAccount = sc.nextInt();
 				if (toAccount > currentMax+1) {
-					System.out.println("없는 계좌입니다.");
+					System.out.println("없는 계좌번호입니다. 계좌번호를 확인해주세요.");
 					break;
 				}
 				System.out.print("이체할 금액 >> ");
 				int money = sc.nextInt();
 				if (money < 0) {
-					System.out.println("양수의 값만 입력해주세요.");
+					System.out.println("금액은 음수가 될 수 없습니다. 다시 입력해주세요.");
 				} else if (accounts[myAccount-1] - money < 0) { 
-					System.out.println("본인 계좌에 돈이 충분하지 않습니다.");
+					System.out.println("요청한 출금 금액이 계좌잔액보다 큽니다.");
 					System.out.println("계좌 이체에 실패했습니다.");
 				} else {
 					accounts[toAccount-1] += money;
