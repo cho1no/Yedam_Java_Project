@@ -54,26 +54,26 @@ public class ProductInfoManagement {
 				break;
 			case 3:
 				for (int i = 0; i < products.length; i++) {
-					System.out.printf("%s : %d원\n", products[i].name, products[i].price);
+					System.out.printf("%s : %d원\n", products[i].getName(), products[i].getPrice());
 				}
 				break;
 			case 4:
 				// 최대 가격의 품목
 				Product max = products[0];
 				for (int i = 0; i < products.length; i++) {
-					if (max.price < products[i].price) max = products[i];
+					if (max.getPrice() < products[i].getPrice()) max = products[i];
 				}
 				//최대 가격의 품목"들" 제외하고 합 구하기
 				double sum = 0;
 				int cnt = 0;
 				for (int i = 0; i < products.length; i++) {
-					if (max.price != products[i].price) {
+					if (max.getPrice() != products[i].getPrice()) {
 						cnt++;
-						sum += products[i].price;
+						sum += products[i].getPrice();
 					}
 				}
-				System.out.printf("최고 가격을 가지는 제품 > %s, %.0f원\n", max.name, max.price);
-				System.out.printf("해당 제품을 제외한 제품들의 가격을 다 더하면 %.0f원 평균은 %.0f입니다.\n", sum, sum/cnt); // 최대 항목인 값들 제외한 평균값
+				System.out.printf("최고 가격을 가지는 제품 > %s, %d원\n", max.getName(), max.getPrice());
+				System.out.printf("해당 제품을 제외한 제품들의 가격을 다 더하면 %.0f원 평균은 %.2f입니다.\n", sum, sum/cnt); // 최대 항목인 값들 제외한 평균값
 				break;
 			case 5:
 				isRun = false;
