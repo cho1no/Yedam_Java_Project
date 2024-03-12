@@ -3,7 +3,13 @@ package com.yedam.java.exam05;
 import java.util.Scanner;
 
 public class MainExample {
-
+	static int chargeSum(int[] list) {
+		int sum = 0;
+		for (int var : list) {
+			sum += var;
+		}
+		return sum;
+	}
 	public static void main(String[] args) {
 		boolean isRun = true; // 동작 여부
 		int[] chargeList = new int[7]; // 가계부 생성
@@ -11,15 +17,6 @@ public class MainExample {
 		Scanner sc = new Scanner(System.in);
 		
 		while (isRun) {
-			// 합계
-			int sum = 0;
-			for (int val : chargeList) {
-				sum += val;
-			}
-			
-			// 평균
-			double avg = (double)sum/chargeList.length;
-			
 			System.out.println("====================================================================");
 			System.out.println(" 1.가계부 초기화 | 2. 가계부 일괄입력 | 3. 가계부 확인 | 4.통계 | 5.분석 | 6.종료");
 			System.out.println("====================================================================");
@@ -53,11 +50,15 @@ public class MainExample {
 				}
 				break;
 			case 4: // 통계
+				int sum = chargeSum(chargeList);
+				double avg = (double)sum/chargeList.length;
 				System.out.printf("지출 총 합계는 %d원이며 평균적으로 %.2f원을 사용했습니다.\n", sum, avg); // 미리 구한 합계와 평균 가져와서 처리
 				break;
 			case 5: // 분석
 				int cnt = 0;
 				int max = chargeList[0];
+				sum = chargeSum(chargeList);
+				avg = (double)sum/chargeList.length;
 				for (int val : chargeList) { // 인덱스 필요 없어서 향상된 for문 사용
 					if (val > avg) cnt++; // 평균 초과시 cnt 증가
 					if (max < val) max = val; // 최대값 찾기
@@ -75,5 +76,5 @@ public class MainExample {
 		System.out.println("프로그램을 종료하겠습니다.");
 		sc.close();
 	}
-
+	
 }
