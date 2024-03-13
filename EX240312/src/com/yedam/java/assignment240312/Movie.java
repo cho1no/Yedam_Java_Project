@@ -3,8 +3,8 @@ package com.yedam.java.assignment240312;
 public class Movie extends Culture{
 	String genre;
 	
-	Movie(String name, int directorNum, int actorNum, int audienceNum, int score, String genre) {
-		super(name, directorNum, actorNum, audienceNum, score);
+	Movie(String name, int directorNum, int actorNum, String genre) {
+		super(name, directorNum, actorNum);
 		this.genre = genre;
 	}
 

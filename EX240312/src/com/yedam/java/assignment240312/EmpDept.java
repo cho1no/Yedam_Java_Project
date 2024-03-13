@@ -23,6 +23,7 @@ public class EmpDept extends Employee{
 	
 	@Override
 	public void print() {
-		System.out.println("수퍼클래스\n서브클래스");
+		super.print();
+		System.out.println("서브클래스");
 	}
 }

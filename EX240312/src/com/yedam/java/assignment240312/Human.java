@@ -15,6 +15,6 @@ public class Human {
 	
 	// 메소드
 	public void getInformation() {
-		System.out.printf("%s님의 신장 %.f, 몸무게 %.f", this.height, this.weight);
+		System.out.printf("%s님의 신장 %.0f, 몸무게 %.0f", this.name, this.height, this.weight);
 	}
 }

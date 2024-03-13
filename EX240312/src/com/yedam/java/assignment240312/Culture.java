@@ -9,12 +9,10 @@ public abstract class Culture {
 	int totalScore;
 	
 	// 생성자
-	Culture(String name, int directorNum, int actorNum, int audienceNum, int score){
+	Culture(String name, int directorNum, int actorNum){
 		this.name = name;
 		this.directorNum = directorNum;
 		this.actorNum = actorNum;
-		this.audienceNum = audienceNum;
-		this.totalScore = score;
 	}
 	
 	// 메소드
@@ -27,6 +25,7 @@ public abstract class Culture {
 	
 	public String getGrade() {
 		int grade = this.totalScore/this.audienceNum;
+		grade = grade > 5 ? 5 : grade;
 		String text = "";
 		for (int i = 0; i < grade; i++) {
 			text += "☆";
