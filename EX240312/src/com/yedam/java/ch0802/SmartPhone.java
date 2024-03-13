@@ -5,7 +5,7 @@ public class SmartPhone implements Phone {
 	public String owner;
 	
 	// 생성자
-	SmartPhone(String owner){
+	public SmartPhone(String owner){
 		this.owner = owner;
 	}
 	
