@@ -6,17 +6,17 @@ public class Book {
 	private String bookNum;
 	private String writer;
 	private String published;
-	private String bookInfo;
+	private String bookIntro;
 	
 	// 생성자
 	public Book() {}
 	
-	public Book(String title, String bookNum, String writer, String published, String bookInfo) {
-		this.title = title;
+	public Book(String bookNum, String title, String writer, String published, String bookIntro) {
 		this.bookNum = bookNum;
+		this.title = title;
 		this.writer = writer;
 		this.published = published;
-		this.bookInfo = bookInfo;
+		this.bookIntro = bookIntro;
 	}
 	
 	// 메소드
@@ -50,10 +50,14 @@ public class Book {
 		this.published = published;
 	}
 	// bookInfo get set
-	public String getBookInfo() {
-		return bookInfo;
+	public String getBookIntro() {
+		return bookIntro;
 	}
-	public void setBookInfo(String bookInfo) {
-		this.bookInfo = bookInfo;
+	public void setBookIntro(String bookIntro) {
+		this.bookIntro = bookIntro;
+	}
+	
+	public String getBookInfo() {
+		return "[" + this.bookNum + "] " + this.title + ", " + this.writer + ", " + this.published + ", " + this.bookIntro;
 	}
 }
