@@ -17,7 +17,7 @@ public class BookDAO {
 	// 수정
 	public void updateBoard(String bookNum, String bookIntro) {
 		for (int i = 0; i < bookList.size(); i++) {
-			Book thisBook = bookList.get(i);
+			Book thisBook = bookList.get(i); // 얕은복사 (thisBook은 bookList.get(i)를 가리킬뿐, 즉 thisBook은 별명인 셈)
 			if (thisBook.getBookNum().equals(bookNum)) { // 문자열 비교엔 equals "=="은 안됨
 				thisBook.setBookIntro(bookIntro);
 			}
@@ -30,7 +30,13 @@ public class BookDAO {
 		Book selected = null;
 		for (Book b : bookList) {
 			if (b.getBookNum().equals(bookNum)) {
-				selected = b;
+				//selected = b; //얕은 복사
+				selected = new Book(); // 깊은 복사
+				selected.setBookNum(b.getBookNum());
+				selected.setBookNum(b.getTitle());
+				selected.setBookNum(b.getWriter());
+				selected.setBookNum(b.getPublished());
+				selected.setBookNum(b.getBookIntro());
 			}
 		}
 		return selected;
@@ -45,8 +51,8 @@ public class BookDAO {
 	// 검색
 	public void searchBook(String searchWord) {
 		for (Book b : bookList) {
-			if (b.getTitle().equals(searchWord)) 	System.out.println(b.getBookInfo());
-			else if (b.getWriter().equals(searchWord)) 	System.out.println(b.getBookInfo());
+			if (b.getTitle().equals(searchWord) || b.getWriter().equals(searchWord)) System.out.println(b.getBookInfo());
+//			else if (b.getWriter().equals(searchWord)) 	System.out.println(b.getBookInfo());
 		}
 	}
 	
